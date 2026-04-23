@@ -1,6 +1,9 @@
+
+// lagrer container
+
 const container = document.getElementById("container");
 
-
+// Knapp som lager et bilde og putter det i containeren menst den spiller noe musikk
 
 function spawnMeisho(){
     const image = document.createElement("img");
@@ -28,6 +31,8 @@ function spawnMeisho(){
         }
     container.appendChild(image)
 }
+
+// Knapp som spiller en video får å fjerne alle bildene og disabler knappen slik det ikkje kan spammast
 
 const clearButton = document.getElementById("clearButton")
 function clearMeish(){
