@@ -24,7 +24,6 @@ function spawnMeisho(){
             audio.play()
         }
     container.appendChild(image)
-    document.body.append(container)
 }
 
     function clearMeish(){
