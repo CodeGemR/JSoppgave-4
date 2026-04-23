@@ -27,7 +27,6 @@ function spawnMeisho(){
             audio.play()
         }
     container.appendChild(image)
-    checkWarning()
 }
 
 const clearButton = document.getElementById("clearButton")
