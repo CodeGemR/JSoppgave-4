@@ -1,4 +1,7 @@
 const container = document.getElementById("container");
+
+
+
 function spawnMeisho(){
     const image = document.createElement("img");
     const randomPic = Math.floor(Math.random() * 100);
@@ -24,6 +27,7 @@ function spawnMeisho(){
             audio.play()
         }
     container.appendChild(image)
+    checkWarning()
 }
 
 const clearButton = document.getElementById("clearButton")
@@ -56,3 +60,4 @@ function clearMeish(){
         clearButton.disabled = false;
         },4000);
     }
+
