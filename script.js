@@ -1,6 +1,5 @@
-
+const container = document.getElementById("container");
 function spawnMeisho(){
-    const container = document.getElementById("container");
     const image = document.createElement("img");
     const randomPic = Math.floor(Math.random() * 100);
         if(randomPic < 60){
@@ -33,9 +32,16 @@ function spawnMeisho(){
             video.style.position = "absolute";
             video.src = "./video/zahand.webm"
             video.controls = false;
-            video.style.top = "-20px"
+            video.style.top = "121px"
             video.style.maxWidth = "100%";
             document.body.append(video);
-            video.volume = 0.1;
+            video.volume = 0.03;
             video.play()
+            setTimeout(() => {
+                video.remove()
+                while (container.firstChild){
+                container.removeChild(container.firstChild)
+            }
+            }, 3000);
+
     }
