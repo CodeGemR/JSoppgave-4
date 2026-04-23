@@ -19,6 +19,7 @@ function spawnMeisho(){
         }else{
             image.src = "./images/gold.png"
             image.alt = "Goldship"
+            image.style.width = "165px";
             const audio = new Audio("./audio/goldImpost.mp3")
             audio.volume = 0.1;
             audio.play()
@@ -26,3 +27,15 @@ function spawnMeisho(){
     container.appendChild(image)
     document.body.append(container)
 }
+
+    function clearMeish(){
+            const video = document.createElement(`video`)
+            video.style.position = "absolute";
+            video.src = "./video/zahand.webm"
+            video.controls = false;
+            video.style.top = "-20px"
+            video.style.maxWidth = "100%";
+            document.body.append(video);
+            video.volume = 0.1;
+            video.play()
+    }
