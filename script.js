@@ -26,21 +26,33 @@ function spawnMeisho(){
     container.appendChild(image)
 }
 
-    function clearMeish(){
-            const video = document.createElement(`video`)
-            video.style.position = "absolute";
-            video.src = "./video/zahand.webm"
-            video.controls = false;
-            video.style.top = "121px"
-            video.style.maxWidth = "100%";
-            document.body.append(video);
-            video.volume = 0.03;
-            video.play()
-            setTimeout(() => {
-                video.remove()
-                while (container.firstChild){
-                container.removeChild(container.firstChild)
-            }
-            }, 3000);
+const clearButton = document.getElementById("clearButton")
+function clearMeish(){
+    const video = document.createElement(`video`)
+    video.style.position = "absolute";
+    video.src = "./video/zahand.webm"
+    video.controls = false;
+    video.style.top = "121px"
+    video.style.maxWidth = "100%";
+    document.body.append(video);
+    video.volume = 0.03;
+    video.play()
+    setTimeout(() => {
+        video.remove()
+        while (container.firstChild){
+        container.removeChild(container.firstChild) 
+    }
+    }, 3000);
 
+    }
+
+    function disableButton(){
+        clearButton.disabled = true;
+    }
+    
+
+    function enableButton(){
+        setTimeout(() => {
+        clearButton.disabled = false;
+        },4000);
     }
