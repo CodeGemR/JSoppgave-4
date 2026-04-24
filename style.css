@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-@keyframes rainbowTitle {
-    
-}
-
 .title{
     display: flex;
     justify-content: center;
